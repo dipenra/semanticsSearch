@@ -1,0 +1,36 @@
+<% puts @products %>
+<table class="table table-bordered">
+  <caption>Search Results for <%= @searchTerm %></caption>
+  <% if @products["results_count"] > 0 %>
+    <thead>
+    <tr>
+      <th>Semantics id</th>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Image</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @products["results"].each do |result| %>
+      <tr>
+        <td><%= result["sem3_id"] %></td>
+        <td><%= result["name"] %></td>
+        <td><%= result["brand"] %></td>
+        <td>
+          <%=
+          if result["images_total"] > 0
+            image_tag(result["images"][0], size: "100x100", alt: result["description"])
+          else
+            content_tag(:p, "N/A")
+          end
+          %>
+        </td>
+        <td><%= result["price"] %> <%= result["price_currency"] %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  <% else %>
+    <div>No data found</div>
+  <% end %>
+</table>
