@@ -1,0 +1,9 @@
+development: &base
+  key: "SEM3748B148964FF31F376ACB73B6F9F2A3F"
+  secret: "NTc0MWViZTgwZDQzM2RhZjFkNTQyMDViYTU1YjU0M2I"
+
+test:
+ <<: *base
+
+production:
+  <<: *base
