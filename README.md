@@ -6,23 +6,17 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version: 2.4.0
-
 * Rails version: 5.0.2
-
-* Dependencies
+* Other Dependencies
     - SQLite3
-
-* Configuration
-
-* Database creation
-    - rake db:create
-    - bin/rails db:migrate
-
-* Database initialization
-
-* How to run
-    - bin/rails server
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+    - Semantics3 API (https://www.semantics3.com/)
+    - Bundle Install (http://bundler.io/v1.13/man/bundle-install.1.html)
+    
+* Local Setup
+    - Setup Local database
+        - $ rake db:create
+        - $ bin/rails db:migrate
+    - Install the gems 
+        - $ bundle install
+    - Run the App
+        - $ rails server
