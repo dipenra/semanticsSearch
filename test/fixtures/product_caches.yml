@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  key: 
-  name: MyString
-  values: MyString
-  date_created: 2017-03-29 17:49:58
+  key: <%= Digest::MD5.hexdigest("Moon" + Time.now.to_s) %>
+  name: "Moon New Zealand"
+  values: "{\"code\":\"OK\",\"offset\":0,\"results_count\":10,\"results\":[{\"features\":{\"Cellular Network Technology\":\"GSM\",\"Operating System\":\"Apple iOS\",\"Cell Phone Service Provider\":\"Unlocked\"}}]}"
+  date_created: <%= Time.now %>
 
 two:
-  key: 
-  name: MyString
-  values: MyString
-  date_created: 2017-03-29 17:49:58
+  key: <%= Digest::MD5.hexdigest("iphone" + Time.now.to_s) %>
+  name: "iPhone"
+  values: "{\"code\":\"OK\",\"offset\":0,\"results_count\":1,\"results\":[{\"features\":{\"Network Technology\":\"GSM\",\"Operating System\":\"Apple iOS\",\"Cell Phone Service Provider\":\"Unlocked\"}}]}"
+  date_created: <%= Time.now %>

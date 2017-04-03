@@ -9,7 +9,7 @@ class SemanticsController < ApplicationController
 
     if !ProductCache.exists?(key: key)
       @products = Semantics.get_products(@searchTerm)
-      ProductCache.create(key: key, name: @searchTerm, values: @products.to_json)
+      ProductCache.create(key: key, name: @searchTerm, values: @products.to_json, date_created: Time.now)
     else
       dbproducts = ProductCache.find_by(key: key)
       @products = JSON.parse(dbproducts[:values])
