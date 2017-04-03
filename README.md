@@ -22,3 +22,15 @@ Things you may want to cover:
         - $ rails server
     - Run Test
         - $rails test
+        
+* Contents
+    - UI where you can search for a product using Semantics3 API
+    - UI to view the seach terms stored in SQLite3 Database. Edit them, delete them etc
+    - Pagination (Although it looks like Sematics3 API pagination is not working)
+    
+* Description of how Caching works
+ - Everytime a user searces for a product the logic first checks to see if the data is
+ locally available. If not fetches the data using the Semantics3 API. Stores the data in the local
+ database and spits it to the frontend.
+ - If the data is present in the database then it gets the data from the database.
+ 
