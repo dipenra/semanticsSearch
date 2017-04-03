@@ -2,7 +2,11 @@
 
 <h1>Product Caches</h1>
 
-<table>
+<%= link_to 'New Product Cache', new_product_cache_path, class: "btn btn-default" %>
+<%= link_to 'Search Product', semantics_path, class: "btn btn-default" %>
+<hr></hr>
+
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Key</th>
@@ -18,16 +22,12 @@
       <tr>
         <td><%= product_cach.key %></td>
         <td><%= product_cach.name %></td>
-        <td><%= product_cach.values %></td>
+        <td><div class="limit_height limit_width"><%= product_cach.values %></div></td>
         <td><%= product_cach.date_created %></td>
-        <td><%= link_to 'Show', product_cach %></td>
-        <td><%= link_to 'Edit', edit_product_cache_path(product_cach) %></td>
-        <td><%= link_to 'Destroy', product_cach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', product_cach, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_product_cache_path(product_cach), class: "btn btn-default" %></td>
+        <td><%= link_to 'Destroy', product_cach, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Product Cach', new_product_cache_path %>

@@ -20,3 +20,5 @@ Things you may want to cover:
         - $ bundle install
     - Run the App
         - $ rails server
+    - Run Test
+        - $rails test
