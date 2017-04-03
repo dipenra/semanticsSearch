@@ -16,4 +16,8 @@ $(function() {
             $('#resultContainer').removeClass("hidden");
         });
     });
+
+    $('#inputProductName').change( function( event ) {
+        $('#searchSemantics').find('#page').val('1');
+    });
 });

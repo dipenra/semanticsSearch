@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require form
+//= require pagination
 //= require_tree .

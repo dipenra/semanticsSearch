@@ -1,6 +1,11 @@
+<div class="padding">
+  <%= link_to "< Prev", "#", class: "btn btn-default _nav", data: {page: @page - 1 } if (@page > 1) %>
+  <%= link_to "Next >", "#", class: "btn btn-default _nav", data: {page: @page + 1 } if (@nextpg) %>
+</div>
+
 <table class="table table-bordered">
   <caption>Search Results for <%= @searchTerm %></caption>
-  <% if @products["results_count"] > 0 %>
+  <% if @products %>
     <thead>
     <tr>
       <th>Semantics id</th>

@@ -4,6 +4,6 @@ class ProductCache < ApplicationRecord
   validates :values, presence: true
 
   def self.getKey(name, offset)
-    return Digest::MD5.hexdigest(name + offset)
+    return Digest::MD5.hexdigest(name + offset.to_s)
   end
 end
